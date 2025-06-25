@@ -11,11 +11,17 @@ CFLAGS += -DDEBUG
 endif
 
 # Archivos comunes (fuentes sin main)
-COMMON_SRCS = $(SRC_DIR)/read-write-block.c $(SRC_DIR)/bitmap.c $(SRC_DIR)/superblock.c $(SRC_DIR)/rootdir.c $(SRC_DIR)/inode.c $(SRC_DIR)/ls-func.c $(SRC_DIR)/read-write-data.c
+COMMON_SRCS = \
+    $(SRC_DIR)/read-write-block.c \
+    $(SRC_DIR)/bitmap.c \
+    $(SRC_DIR)/superblock.c \
+    $(SRC_DIR)/rootdir.c \
+    $(SRC_DIR)/inode.c/
+    $(SRC_DIR)/ls-func.c
 COMMON_HDRS = $(INC_DIR)/vfs.h
 
 # Ejecutables - fuentes con función main
-BINS = vfs-mkfs vfs-info vfs-copy
+BINS = vfs-mkfs vfs-info vfs-copy vfs-touch
 
 # Regla principal
 all: $(BINS)
