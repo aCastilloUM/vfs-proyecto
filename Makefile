@@ -16,12 +16,12 @@ COMMON_SRCS = \
     $(SRC_DIR)/bitmap.c \
     $(SRC_DIR)/superblock.c \
     $(SRC_DIR)/rootdir.c \
-    $(SRC_DIR)/inode.c/
-    $(SRC_DIR)/ls-func.c
-COMMON_HDRS = $(INC_DIR)/vfs.h
+    $(SRC_DIR)/inode.c \
+    $(SRC_DIR)/ls-func.c \
+    $(SRC_DIR)/read-write-data.c
 
 # Ejecutables - fuentes con función main
-BINS = vfs-mkfs vfs-info vfs-copy vfs-touch
+BINS = vfs-mkfs vfs-info vfs-copy vfs-touch vfs-ls vfs-rm vfs-cat vfs-lsort vfs-trunc vfs-mkdir vfs-lsdir vfs-rename
 
 # Regla principal
 all: $(BINS)
